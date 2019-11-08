@@ -1,10 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dist/css/style.css">
+    <title>Codejam-canvas</title>
 </head>
 <body>
+<header class="header">
+    <h1 class="header__h1">CodeJam - Pallete</h1>
+    <button class="header__button_menu">
+    </button>
+    <button class="header__button_options">
+    </button>
+</header>
 
+<main class="main">
+    <section class="main__section">
+        <ul class="panel main__i">
+            <li class="main__panel">
+                <ul class="main__list">
+                    <li class="list__item">
+                        <button class="i i--paint-bucket item__button">Paint bucket</button>
+                    </li>
+
+                    <li class="list__item">
+                        <button class="i i--choose-color item__button">Choose color</button>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="main__panel">
+                <ul class="main__list">
+                    <li class="list__item"><button class="i i--move item__button">Move</button></li>
+
+                    <li class="list__item">
+                        <button class="i i--transform item__button">Transform</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="panel main__colors">
+            <li class="main__panel">
+                <ul class="main__list">
+                    <li class="list__item">
+                        <button class="color color--current item__button">Current color</button>
+                    </li>
+
+                    <li class="list__item">
+                        <button class="color color--prev item__button">Prev color</button>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="main__panel">
+                <ul class="main__list">
+                    <li class="list__item"><button class="color color--red item__button">red</button></li>
+
+                    <li class="list__item">
+                        <button class="color color--blue item__button">blue</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <ul class="panel main__sizes">
+        <li class="main__panel">
+            <ul class="sizes">
+                <li class="sizes__item">
+                    <input class="visually-hidden" type="radio" name="sizes" id="4x4"
+                           data-size="4" checked>
+                    <label class="sizes__toggle" for="4x4">4x4</label>
+                </li>
+
+                <li class="sizes__item">
+                    <input class="visually-hidden" type="radio" name="sizes" id="32x32" data-size="32">
+                    <label class="sizes__toggle" for="32x32">32x32</label>
+                </li>
+
+                <li class="sizes__item">
+                    <input class="visually-hidden" type="radio" name="sizes" id="256x256"
+                           data-size="256">
+                    <label class="sizes__toggle" for="256x256">256x256</label>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <canvas class="canvas main__canvas" width="512" height="512">
+    </canvas>
+</main>
+<script src="dist/js/bundle.js"></script>
 </body>
 </html>
