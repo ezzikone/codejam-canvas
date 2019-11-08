@@ -48,7 +48,7 @@ export default class Canvas {
     renderImage(x, y, src) {
         const ctx = this.block.getContext("2d");
         const image = new Image(this.gridSize, this.gridSize);
-        image.src = src;
+        image.src = 'dist\/' + src;
         image.onload = () => ctx.drawImage(image, x, y, this.block.width, this.block.height);
     }
 
