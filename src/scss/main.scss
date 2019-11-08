@@ -1,0 +1,193 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+
+  header {
+    display: flex;
+    align-items: center;
+    padding: 14px 20px;
+    box-shadow: 0 4px 4px rgba(0,0,0,.24), 0 0 4px rgba(0,0,0,.12);
+
+    h1 {
+      order: 1;
+      margin: 0 auto 0 30px;
+      font: normal 500 20px/23px "Roboto", Arial, Helvetica, sans-serif;
+      color: rgba(0,0,0,0.87);
+    }
+
+    .header__button_menu {
+      width: 18px;
+      height: 12px;
+      border: none;
+      background: url("../img/menu.svg") no-repeat center;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .header__button_options {
+      order: 2;
+      width: 4px;
+      height: 16px;
+      border: none;
+      background: url("../img/options.svg") no-repeat center;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+
+  main {
+    display: flex;
+    justify-content: space-between;
+    padding: 79px 130px 0;
+
+    .main__section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .main__i {
+        order: 1;
+      }
+
+      .main__colors {
+        order: 2;
+      }
+
+      .main__panel {
+        border-bottom: 1px solid rgba(0,0,0,0.12);
+
+        .main__list {
+          margin: 0;
+          padding: 0 16px;
+          list-style: none;
+
+          .i {
+              padding: 12px 0 12px 57px;
+              font-size: 16px;
+              line-height: 24px;
+              text-align: left;
+              background: no-repeat 0 center;
+              border: none;
+              outline: none;
+              cursor: pointer;
+
+              &--paint-bucket {
+                background-image: url("../img/paint.svg");
+              }
+
+              &--choose-color {
+                background-image: url("../img/choose.svg");
+              }
+
+              &--move {
+                background-image: url("../img/move.svg");
+              }
+
+              &--transform {
+                background-image: url("../img/transform.svg");
+              }
+            }
+
+          .item__button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .panel {
+      margin: 0;
+      padding: 0;
+      height: 202px;
+      width: 228px;
+      background: #ffffff;
+      box-shadow: 0 4px 4px rgba(0,0,0,0.24), 0 0 4px rgba(0,0,0,0.12);
+      list-style: none;
+    }
+
+    .main__sizes {
+      order: 4;
+
+      .main__panel {
+        border-bottom: none;
+
+        .sizes {
+          margin: 0;
+          padding: 0 16px;
+          list-style: none;
+
+          .sizes__item {
+            padding: 12px 0;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: left;
+            background: no-repeat 0 center;
+            border: none;
+            outline: none;
+
+            .sizes__toggle {
+              position: relative;
+              display: block;
+              padding-left: 57px;
+              width: 100%;
+              cursor: pointer;
+            }
+
+            .sizes__toggle::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 50%;
+              width: 20px;
+              height: 20px;
+              border: 1px solid #757575;
+              border-radius: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+
+    canvas {
+      order: 3;
+      width: 512px;
+      height: 512px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.12), 0 0 4px rgba(0,0,0,0.12);
+    }
+  }
+
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+
+}
+
+button {
+  text-transform: none;
+  overflow: visible;
+}
