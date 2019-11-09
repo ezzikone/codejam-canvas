@@ -63,4 +63,22 @@ export default class Canvas {
             ? `rgba(${color[0]}, ${color[1]}, ${color[2]}, ${color[3]})`
             : `#${color}`;
     }
+
+    /*transform(a) {
+    a = arr.length - 1,
+    newArr = [];
+
+
+    for (let i = 0; i < arr.length; i++) {
+        newArr.push([]);
+    }
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            newArr[j].push(arr[a - i][j]);
+        }
+    }
+
+        arr = newArr;
+    }*/
 }
